@@ -20,3 +20,6 @@
 
 - Template engine (handlebars): giúp viết code html, css trong trường hợp này
   + npm install express-handlebars
+
+- npm install node-sass --save-dev
+  + npm run watch

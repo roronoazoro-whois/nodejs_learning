@@ -1,9 +1,12 @@
 const express = require("express");
+const path = require('path');
 const morgan = require("morgan");
 const { engine } = require("express-handlebars");
 
 // EXPRESS JS
 const app = express();
+app.use(express.static(path.join(__dirname, "public")));
+// http://localhost:3000/img/logo.png
 const port = 3000;
 
 // HTTP LOGGER
