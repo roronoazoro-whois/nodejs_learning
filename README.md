@@ -17,3 +17,6 @@
 - Thư viện morgan:
   + Logger http request 
   + npm i morgan --save-dev
+
+- Template engine (handlebars): giúp viết code html, css trong trường hợp này
+  + npm install express-handlebars

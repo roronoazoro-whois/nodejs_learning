@@ -1,15 +1,26 @@
-const express = require("express"); // -> import thư viện (là một function)
+const express = require("express");
 const morgan = require("morgan");
+const { engine } = require("express-handlebars");
 
-const app = express(); // -> chạy function (thư viện) -> trả về đối tượng app,
-// đại diện cho ứng dụng nodejs
-const port = 3000; // -> port
+// EXPRESS JS
+const app = express();
+const port = 3000;
 
+// HTTP LOGGER
 app.use(morgan("combined"));
 
-// định nghĩa route
-app.get("/home", (req, res) => {
-  res.send("Hello World!");
+// HANDLEBARS
+app.engine(".hbs", engine({ extname: ".hbs" }));
+app.set("view engine", ".hbs");
+app.set("views", "./views");
+
+// Định nghĩa route
+app.get("/", (req, res) => {
+  res.render("home");
+});
+
+app.get("/news", (req, res) => {
+  res.render("news");
 });
 
 app.listen(port, () => {
