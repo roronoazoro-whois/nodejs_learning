@@ -13,3 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
     }
   - npm start
+
+- Thư viện morgan:
+  + Logger http request 
+  + npm i morgan --save-dev
