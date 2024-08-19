@@ -2,5 +2,14 @@
 
 - npm i express -> cài đặt thư viện express js
 
-- web browser: http://localhost:3000/ 
-    -> đồng nghĩa với gửi một get http request đến server nodejs
+- web browser: http://localhost:3000/
+  -> đồng nghĩa với gửi một get http request đến server nodejs
+
+- Thư viện Nodemon -> debug
+  - Hổ trợ restart lại ứng dụng nodejs khi có thay đổi
+  - npm install -g nodemon
+  - "scripts": {
+    "start": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+    }
+  - npm start

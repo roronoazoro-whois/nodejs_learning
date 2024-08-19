@@ -5,7 +5,7 @@ const app = express(); // -> chạy function (thư viện) -> trả về đối 
 const port = 3000; // -> port
 
 // định nghĩa route
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
   res.send("Hello World!");
 });
 
