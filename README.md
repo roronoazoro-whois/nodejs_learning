@@ -23,3 +23,11 @@
 
 - npm install node-sass --save-dev
   + npm run watch
+
+- Các HTTP METHODS:
+  + GET: xảy ra mặc định khi dùng web browser truy cập vào một url, thẻ a,... 
+    *Query parameters: https://example.com/products?category=shoes&sort=price_asc (sau dấu ?, ngăng cách nhau bởi &, key = value)
+    -> category=shoes&sort=price_asc
+    *METHODS nào cũng dùng được Query param nhưng thường dùng ở GET METHOD, các METHODS khác thường có cách truyền dữ liệu riêng
+  + POST: gửi dữ liệu từ client -> server
+    *Không được gửi đi dưới dạng query param mà thay vào đó là Form Data và không nhìn thấy được ở URL
