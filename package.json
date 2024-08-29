@@ -12,10 +12,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
-    "express-handlebars": "^8.0.1"
+    "express-handlebars": "^8.0.1",
+    "mongoose": "^8.6.0"
   },
   "devDependencies": {
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.9",
     "morgan": "^1.10.0",
-    "node-sass": "^9.0.0"
+    "node-sass": "^9.0.0",
+    "prettier": "^3.3.3"
   }
 }

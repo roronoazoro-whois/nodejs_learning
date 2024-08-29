@@ -2,8 +2,12 @@ const express = require("express");
 const path = require("path");
 const morgan = require("morgan");
 const { engine } = require("express-handlebars");
+const db = require("./config/db");
 
-const route = require('./routes/index');
+const route = require("./routes/index");
+
+// Connect to MongoDB
+db.connect();
 
 // EXPRESS JS
 const app = express();

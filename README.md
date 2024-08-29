@@ -31,3 +31,10 @@
     *METHODS nào cũng dùng được Query param nhưng thường dùng ở GET METHOD, các METHODS khác thường có cách truyền dữ liệu riêng
   + POST: gửi dữ liệu từ client -> server
     *Không được gửi đi dưới dạng query param mà thay vào đó là Form Data và không nhìn thấy được ở URL
+
+- Cài đặt: npm i prettier lint-staged husky --save-dev
+- Nosql (Mongodb):
+  + Collection <=> Table
+    * Trong Collection có các Documents, ví dụ mỗi khóa học trong Collections Courses gọi là Documents, các Documents có thể không cùng khuôn với nhau
+    -> Ưu điểm: linh hoạt
+    -> Nhược điểm: thiếu chặt chẽ (thư viện Mongoose sẽ giải quyết vấn đề này: quản lí các documents dưới dạng object, khi đó không cần cài mongodb)
