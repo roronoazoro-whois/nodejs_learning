@@ -40,3 +40,9 @@
     -> Nhược điểm: thiếu chặt chẽ (thư viện Mongoose sẽ giải quyết vấn đề này: quản lí các documents dưới dạng object, khi đó không cần cài mongodb)
 - HTML chỉ hỗ trợ phương thức GET và POST trong thẻ <form>.
 - Để sử dụng phương thức PUT, cần sử dụng method-override hoặc một kỹ thuật tương tự trên server để chuyển đổi phương thức POST thành PUT.
+
+- Soft Delete: Xóa mềm -> Không xóa hẳn ra khỏi DB, chỉ ẩn đi
+
+- Update: put, patch
++ put: sửa tất cả các field
++ patch: chỉ sửa một field
