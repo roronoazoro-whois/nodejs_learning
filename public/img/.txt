@@ -1,0 +1,7 @@
+- Client: browser
+- Server: còn lại
+    + FrameWork expressjs đã bao gồm server trong đó
+    + expressjs cấu hình sẵn routes
+    + routes -> dispatcher -> callback handler (dispatcher cũng được cấu hình sẵn trong expressjs)
+        * Khi liên tưởng đến MVC, nếu code theo cách cũ từ trước đến giờ (No MVC), thì callback sẽ đóng vai trò là Controller (bao gồm xử lí cả view)
+            -> Cho nên ta sẽ phải cấu hinh lại cho ra MVC

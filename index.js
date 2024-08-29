@@ -3,6 +3,8 @@ const path = require("path");
 const morgan = require("morgan");
 const { engine } = require("express-handlebars");
 
+const route = require('./routes/index');
+
 // EXPRESS JS
 const app = express();
 app.use(express.static(path.join(__dirname, "public")));
@@ -24,27 +26,30 @@ app.set("view engine", ".hbs");
 app.set("views", "./views");
 
 // Định nghĩa route
-app.get("/", (req, res) => {
-  res.render("home");
-});
 
-app.get("/news", (req, res) => {
-  res.render("news");
-});
+route(app);
 
-app.get("/search", (req, res) => {
-  console.log(req.query.q);
-  res.render("search");
-});
+// app.get("/", (req, res) => {
+//   res.render("home");
+// });
 
-app.post("/search", (req, res) => {
-  // middleware là thành phần đứng giữa browser và controller trong MVC
-  // expressjs tích hợp sẵn middleware để xử lí query param
-  // nhưng không được tích hợp trong body
+// app.get("/news", (req, res) => {
+//   res.render("news");
+// });
 
-  console.log(req.body);
-  res.send("");
-});
+// app.get("/search", (req, res) => {
+//   console.log(req.query.q);
+//   res.render("search");
+// });
+
+// app.post("/search", (req, res) => {
+//   // middleware là thành phần đứng giữa browser và controller trong MVC
+//   // expressjs tích hợp sẵn middleware để xử lí query param
+//   // nhưng không được tích hợp trong body
+
+//   console.log(req.body);
+//   res.send("");
+// });
 
 // req(est): chứa các thông tin cơ bản của một httpRequest (path, method,...) do client gửi
 // res(sponse): chứa những thông tin mà server trả về cho client sau khi xử lí request đó
