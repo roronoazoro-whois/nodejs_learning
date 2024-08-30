@@ -24,6 +24,36 @@ app.use(express.json()); // -> middleware xử lí cho fect, axios,...
 // http://localhost:3000/img/logo.png
 const port = 3000;
 
+// HỌC VỀ MIDDLEWARE
+// Tất cả function phía sau /middleware đều có thể là middleware
+// => functino đầu tiên là middleware check
+// Những function trong app.use là middleware (cho tất cả các route)
+// app.use bao gồm tất cả các loại method (get, post, put, delete,...) và không cần
+// định nghĩa path, nếu có path thì chỉ áp dụng cho path đó
+// dùng middleware để check login, check admin, check token, check quyền truy cập,... cho
+// cả ứng dụng (authen, author, permission)
+
+app.get(
+  "/middleware",
+  function (req, res, next) {
+    if (req.query.admin === "true") {
+      req.token = "admin";
+      next();
+      // next đẩy sang middleware tiếp theo khi thỏa điều kiện
+      // http://localhost:3000/middleware?admin=true
+      return;
+    }
+    res.status(403).json({
+      message: "You are not admin",
+    });
+  },
+  function (req, res, next) {
+    res.json({
+      message: "Hello: " + req.token,
+    });
+  }
+);
+
 // HTTP LOGGER
 app.use(morgan("combined"));
 

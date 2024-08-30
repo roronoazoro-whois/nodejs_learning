@@ -46,3 +46,6 @@
 - Update: put, patch
 + put: sửa tất cả các field
 + patch: chỉ sửa một field
+
+- Middleware: là một khái niệm quan trọng trong lập trình web, đặc biệt là trong các framework như Express.js của Node.js. Middleware là các hàm nằm giữa việc nhận một yêu cầu (request) từ client và gửi một phản hồi (response) từ server. Các hàm middleware có thể can thiệp vào yêu cầu hoặc phản hồi.
+
