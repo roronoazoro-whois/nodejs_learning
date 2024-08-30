@@ -36,7 +36,7 @@
     <thead>
       <tr>
         <th scope="col" style="width: 5%;"></th>
-        <th scope="col" style="width: 5%;">#</th>
+        {{!-- <th scope="col" style="width: 5%;">#</th> --}}
         <th scope="col" style="width: 45%;">Tên khóa học {{{sortable "name" _sort}}}</th>
         <th scope="col" style="width: 20%;">Trình độ {{{sortable "level" _sort}}}</th>
         <th scope="col" style="width: 20%;" colspan="2">Thời gian tạo {{{sortable "createdAt" _sort}}}</th>
@@ -55,7 +55,7 @@
               />
             </div>
           </td>
-          <th scope="row">{{sum @index 1}}</th>
+          {{!-- <th scope="row">{{sum @index 1}}</th> --}}
           <td>{{this.name}}</td>
           <td>{{this.level}}</td>
           <td>{{this.createdAt}}</td>
